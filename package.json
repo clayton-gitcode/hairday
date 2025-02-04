@@ -1,4 +1,10 @@
 {
+  "name": "hairday",
+  "description": "A project to manage hair salon appointments using a JSON server.",
+  "author": {
+    "name": "Clayton Lima",
+    "email": "_clayton@outlook.com"
+  },
   "scripts": {
     "server": "json-server --watch server.json"
   },
