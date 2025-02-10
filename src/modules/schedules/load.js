@@ -5,6 +5,6 @@ import{ hoursLoad } from '../form/hours-load.js';
 const selectDate = document.getElementById('date');
 export function scheduleDays(){
 
-    const date = selectDate.value;
+    const date = selectDate.value
     hoursLoad({date});
 }
