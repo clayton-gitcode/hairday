@@ -22,13 +22,34 @@ export function hoursLoad({date}){
     console.log(opening)
     
     //renderiza o horário.
-    opening.forEach(({hour, available}) => {
+    opening.forEach(({hour, avaialable}) => {
 
         const li = document.createElement("li");
         li.classList.add("hour");
-        li.classList.add(available ? "hour-available" : "hour-unavailable");
+        li.classList.add(avaialable ? "hour-available" : "hour-unavailable");
 
         li.textContent = hour;
+
+        //validando os periodos manhã, tarde e noite
+        if(hour === "09:00"){
+            hourHeaderadd("Manhã");
+        }
+        else if(hour === "13:00"){
+            hourHeaderadd("Tarde");
+        }
+        else if(hour === "18:00"){
+            hourHeaderadd("Noite");
+        }
         hours.append(li);
     }) 
+}
+
+//separação dos horas de funcionamento
+function hourHeaderadd(title){
+
+    const header = document.createElement("li");
+    header.classList.add("hour-period");
+    header.textContent = title;
+
+    hours.append(header);
 }
