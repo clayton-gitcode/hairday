@@ -7,6 +7,9 @@ const hours = document.getElementById("hours");
 
 export function hoursLoad({date}){
 
+    //limpa a lista de horários.
+    hours.innerHTML  = ""
+
     const opening = openingHours.map((hour) => {
         //recupera somenta as horas
         //desestruturação
@@ -32,7 +35,7 @@ export function hoursLoad({date}){
         li.textContent = hour;
 
         //validando os periodos manhã, tarde e noite
-        if(hour === "09:00"){
+        if(hour === "9:00"){
             hourHeaderadd("Manhã");
         }
         else if(hour === "13:00"){
