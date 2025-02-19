@@ -13,10 +13,10 @@ export async function scheduleNew({id, name, when}) {
                     id, name, when
                 })         
         })
-
         alert("Agendamento Realizado!")
+        
     } catch (error) {
         console.log(error)
-        alert("erro")
+        alert("Não foi possivel agendar")
     }
 }

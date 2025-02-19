@@ -7,7 +7,7 @@ export async function scheduleFetchByDay({date}){
         const response = await fetch(
             //Fazendo a requisição para buscar os dados.
             `
-            ${apiConfig.baseURL}/shedules
+            ${apiConfig.baseURL}/schedules
             `
         )
 
